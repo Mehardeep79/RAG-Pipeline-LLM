@@ -1,0 +1,24 @@
+# RAG Pipeline LLM Dependencies
+# Core ML Libraries
+numpy>=1.21.0
+transformers>=4.21.0
+sentence-transformers>=2.2.0
+torch>=1.11.0
+
+# Vector Search
+faiss-cpu>=1.7.0
+
+# Data Sources
+wikipedia>=1.4.0
+
+# Deep Learning Backend
+tf-keras>=2.13.0
+
+# Optional: For future web interface
+# streamlit>=1.25.0
+# gradio>=3.40.0
+
+# Development Dependencies (optional)
+# jupyter>=1.0.0
+# matplotlib>=3.5.0
+# seaborn>=0.11.0
