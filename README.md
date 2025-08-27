@@ -5,6 +5,13 @@
 
 A complete **Retrieval-Augmented Generation (RAG)** pipeline implementation using state-of-the-art language models and vector databases. This system intelligently retrieves relevant information from Wikipedia articles and generates accurate, context-aware answers to user questions with confidence scoring.
 
+<p align="center">
+  <img src="assets/rag_flow.png" width="100%" alt="Rag Flow">
+</p>
+
+<p align="center"><em>RAG Pipeline Flow Diagram</em></p>
+
+
 ## ✨ Key Features
 
 - 📚 **Dynamic Knowledge Retrieval** from Wikipedia with error handling
