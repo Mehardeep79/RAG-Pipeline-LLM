@@ -155,7 +155,6 @@ RAG_Pipeline_LLM/
 ├── streamlit_app.py          # Web interface application              
 ├── README.md                # This file
 ├── requirements.txt         # Python dependencies
-└── LICENSE                  # MIT License
 ```
 
 ## 🔬 How It Works
