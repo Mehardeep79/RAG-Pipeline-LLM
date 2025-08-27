@@ -10,12 +10,19 @@ A complete **Retrieval-Augmented Generation (RAG)** pipeline implementation usin
 </p>
 
 <p align="center"><em>RAG Pipeline Flow Diagram
+  
 📊 Pipeline Summary:
+
 Input: 1 Wikipedia article
+
 Chunks created: 28
+
 Embeddings generated: 28
+
 Relevant chunks retrieved: 3
+
 Final answer generated: 1
+
 </em></p>
 
 
