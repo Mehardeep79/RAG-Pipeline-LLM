@@ -5,9 +5,6 @@
 
 A complete **Retrieval-Augmented Generation (RAG)** pipeline implementation using state-of-the-art language models and vector databases. This system intelligently retrieves relevant information from Wikipedia articles and generates accurate, context-aware answers to user questions with confidence scoring.
 
-![RAG Pipeline Architecture](https://img.shields.io/badge/Pipeline-Wikipedia→Chunks→Embeddings→FAISS→QA→Answer-brightgreen)
-
-
 ## ✨ Key Features
 
 - 📚 **Dynamic Knowledge Retrieval** from Wikipedia with error handling
