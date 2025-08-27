@@ -81,19 +81,35 @@ pip install -r requirements.txt
 pip install wikipedia transformers sentence-transformers faiss-cpu tf_keras numpy
 ```
 
-3. **Run the Jupyter notebook:**
+3. **Choose your interface:**
+
+**Option A: Web Interface (Recommended)**
+```bash
+streamlit run streamlit_app.py
+```
+
+**Option B: Jupyter Notebook**
 ```bash
 jupyter notebook RAG_Pipeline_LLM.ipynb
 ```
 
 ### 📋 Usage Guide
 
+**🌐 Web Interface (Streamlit):**
+1. **Launch App**: Run `streamlit run streamlit_app.py`
+2. **Enter Topic**: Type any Wikipedia topic in the input field
+3. **Process Content**: Click "Fetch & Process Article" and wait for completion
+4. **Ask Questions**: Enter your question and click "Get Answer"
+5. **Explore Results**: View answers, confidence scores, and interactive visualizations
+6. **Analyze Performance**: Check chunk distributions and similarity scores
+
+**📓 Jupyter Notebook:**
 1. **Install Dependencies**: Execute the installation cell
 2. **Import Libraries**: Run the imports cell
-3. **Choose Topic**: Enter any Wikipedia topic when prompted (e.g., "Artificial Intelligence", "Climate Change")
+3. **Choose Topic**: Enter any Wikipedia topic when prompted
 4. **Process Content**: Let the system automatically chunk and embed the content
 5. **Ask Questions**: Query the knowledge base with natural language questions
-6. **Review Results**: Get answers with confidence scores
+6. **Review Results**: Get answers with confidence scores and visualizations
 
 ### 💡 Example Usage
 
@@ -136,9 +152,10 @@ qa_pipeline = pipeline("question-answering", model=qa_model, tokenizer=tokenizer
 ```
 RAG_Pipeline_LLM/
 ├── RAG_Pipeline_LLM.ipynb    # Main implementation notebook
-├── README.md                 # This file
-├── LICENSE                   # MIT License
-└── requirements.txt          # Python dependencies
+├── streamlit_app.py          # Web interface application              
+├── README.md                # This file
+├── requirements.txt         # Python dependencies
+└── LICENSE                  # MIT License
 ```
 
 ## 🔬 How It Works

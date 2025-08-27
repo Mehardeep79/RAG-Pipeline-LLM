@@ -14,9 +14,9 @@ wikipedia>=1.4.0
 # Deep Learning Backend
 tf-keras>=2.13.0
 
-# Optional: For future web interface
-# streamlit>=1.25.0
-# gradio>=3.40.0
+# Web Interface
+streamlit>=1.25.0
+plotly>=5.0.0
 
 # Development Dependencies (optional)
 # jupyter>=1.0.0
