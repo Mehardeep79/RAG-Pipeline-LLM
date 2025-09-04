@@ -1,4 +1,4 @@
-# 🔍 RAG Pipeline For LLMs 🚀
+# 🔍 QnA RAG Pipeline For LLMs 🚀
 
 
 ## 📖 Project Overview
