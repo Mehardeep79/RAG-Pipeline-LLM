@@ -5,6 +5,12 @@
 
 A complete **Retrieval-Augmented Generation (RAG)** pipeline implementation using state-of-the-art language models and vector databases. This system intelligently retrieves relevant information from Wikipedia articles and generates accurate, context-aware answers to user questions with confidence scoring.
 
+## Deployed as Web Applications on: 
+
+**1.** [Link to Hugging Face Spaces (Gradio)](https://huggingface.co/spaces/Mehardeep7/rag-pipeline-llm)
+
+**2.** [Link to Streamlit App](https://wikipedia-rag-pipeline-llm.streamlit.app/)
+
 <p align="center">
   <img src="assets/rag_flow.png" width="100%" alt="Rag Flow">
 </p>
