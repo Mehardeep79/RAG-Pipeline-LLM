@@ -83,25 +83,43 @@ pip install wikipedia transformers sentence-transformers faiss-cpu tf_keras nump
 
 3. **Choose your interface:**
 
-**Option A: Web Interface (Recommended)**
+**Option A: Streamlit Web Interface**
 ```bash
 streamlit run streamlit_app.py
 ```
 
-**Option B: Jupyter Notebook**
+**Option B: Gradio Web Interface (Recommended for Sharing)**
+```bash
+# Local mode (safe, no antivirus conflicts)
+python gradio_app.py
+
+# With public sharing (may trigger antivirus warnings)
+python gradio_app.py --share
+
+```
+
+**Option C: Jupyter Notebook**
 ```bash
 jupyter notebook RAG_Pipeline_LLM.ipynb
 ```
 
 ### 📋 Usage Guide
 
-**🌐 Web Interface (Streamlit):**
+**🌐 Streamlit Interface:**
 1. **Launch App**: Run `streamlit run streamlit_app.py`
 2. **Enter Topic**: Type any Wikipedia topic in the input field
 3. **Process Content**: Click "Fetch & Process Article" and wait for completion
 4. **Ask Questions**: Enter your question and click "Get Answer"
 5. **Explore Results**: View answers, confidence scores, and interactive visualizations
 6. **Analyze Performance**: Check chunk distributions and similarity scores
+
+**🎨 Gradio Interface (Shareable):**
+1. **Launch App**: Run `python gradio_app.py`
+2. **Load Models**: Click "Load Models" in System Controls tab (first time only)
+3. **Process Article**: Enter Wikipedia topic and configure chunk settings
+4. **Ask Questions**: Switch to Q&A tab and enter your questions
+5. **View Analytics**: Explore similarity scores and confidence metrics
+6. **Share**: Use the public Gradio link to share with others
 
 **📓 Jupyter Notebook:**
 1. **Install Dependencies**: Execute the installation cell
@@ -152,8 +170,12 @@ qa_pipeline = pipeline("question-answering", model=qa_model, tokenizer=tokenizer
 ```
 RAG_Pipeline_LLM/
 ├── RAG_Pipeline_LLM.ipynb    # Main implementation notebook
-├── streamlit_app.py          # Web interface application              
-├── README.md                # This file
+├── streamlit_app.py          # Streamlit web interface
+├── gradio_app.py            # Gradio web interface (recommended)
+├── app.py                   # HF Spaces optimized Gradio app
+├── run_app.py               # Streamlit launcher script
+├── run_gradio.py            # Gradio launcher script
+├── README.md                # Project documentation
 ├── requirements.txt         # Python dependencies
 ```
 
@@ -203,6 +225,57 @@ RAG_Pipeline_LLM/
 - 🔄 **Real-time Updates**: Dynamic knowledge base updates
 - 📱 **API Integration**: REST API for production deployment
 
+
+## 🚀 Deployment Options
+
+### 🎨 **Gradio on Hugging Face Spaces (Recommended)**
+
+#### **🌐 Live Demo**: [RAG Pipeline on HF Spaces](https://huggingface.co/spaces/Mehardeep7/rag-pipeline-llm)
+
+#### **📋 Deploy Your Own:**
+
+1. **Fork this repository** to your GitHub
+2. **Create HF Space**: Go to [huggingface.co/spaces](https://huggingface.co/spaces)
+3. **Configure Space**:
+   - SDK: Gradio
+   - Files: Upload `app.py` and `requirements.txt`
+4. **Benefits**: Free hosting, permanent links, GPU upgrades available
+
+#### **🔧 Local Gradio Development:**
+```bash
+# Clone and run locally
+git clone https://github.com/Mehardeep79/RAG_Pipeline_LLM.git
+cd RAG_Pipeline_LLM
+pip install -r requirements.txt
+python gradio_app.py
+```
+
+### 🌐 **Streamlit Cloud Deployment**
+
+1. **Fork/Upload** this repository to GitHub
+2. **Connect** to [Streamlit Cloud](https://streamlit.io/cloud)
+3. **Deploy** using `streamlit_app.py` as the main file
+4. **Wait** for dependencies to install (first deployment takes 5-10 minutes)
+
+### 🔧 Troubleshooting Issues:
+
+**Streamlit Cloud: "ModuleNotFoundError"**
+- ✅ **Solution**: All required packages are now in `requirements.txt`
+- ⚠️ **Note**: First deployment may take longer due to large ML models
+
+**Gradio: Antivirus/Windows Defender Blocking**
+- ❌ **Error**: `WinError 225` virus detection on Gradio's sharing binary
+- ✅ **Solution**: Run `python gradio_app.py` (local only, no public sharing)
+- 🌐 **Alternative**: Use `python gradio_app.py --share` if you need public links
+- 🛡️ **Fix**: Add Gradio to antivirus exceptions or disable real-time protection temporarily
+
+**Memory Issues:**
+- 🔄 Try reducing `chunk_size` in the sidebar (default: 256 → 128)
+- 📉 Reduce `k_retrieval` value (default: 3 → 2)
+
+**Timeout Issues:**
+- ⏱️ Model loading takes 2-3 minutes on first run
+- 💾 Models are cached after first load
 
 ## 📞 Contact 
 
