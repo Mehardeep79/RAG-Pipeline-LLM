@@ -173,8 +173,6 @@ RAG_Pipeline_LLM/
 ├── streamlit_app.py          # Streamlit web interface
 ├── gradio_app.py            # Gradio web interface (recommended)
 ├── app.py                   # HF Spaces optimized Gradio app
-├── run_app.py               # Streamlit launcher script
-├── run_gradio.py            # Gradio launcher script
 ├── README.md                # Project documentation
 ├── requirements.txt         # Python dependencies
 ```
@@ -257,25 +255,7 @@ python gradio_app.py
 3. **Deploy** using `streamlit_app.py` as the main file
 4. **Wait** for dependencies to install (first deployment takes 5-10 minutes)
 
-### 🔧 Troubleshooting Issues:
 
-**Streamlit Cloud: "ModuleNotFoundError"**
-- ✅ **Solution**: All required packages are now in `requirements.txt`
-- ⚠️ **Note**: First deployment may take longer due to large ML models
-
-**Gradio: Antivirus/Windows Defender Blocking**
-- ❌ **Error**: `WinError 225` virus detection on Gradio's sharing binary
-- ✅ **Solution**: Run `python gradio_app.py` (local only, no public sharing)
-- 🌐 **Alternative**: Use `python gradio_app.py --share` if you need public links
-- 🛡️ **Fix**: Add Gradio to antivirus exceptions or disable real-time protection temporarily
-
-**Memory Issues:**
-- 🔄 Try reducing `chunk_size` in the sidebar (default: 256 → 128)
-- 📉 Reduce `k_retrieval` value (default: 3 → 2)
-
-**Timeout Issues:**
-- ⏱️ Model loading takes 2-3 minutes on first run
-- 💾 Models are cached after first load
 
 ## 📞 Contact 
 
